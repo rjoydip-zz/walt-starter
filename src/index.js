@@ -6,7 +6,6 @@ makeCounter().then(wasmModule => {
   console.log('wasmModule', wasmModule.instance.exports.decrement()) // 1
 });
 
-
 import('./counter.js').then(nativeModule => {
   console.log('nativeModule', nativeModule.increment()) // 1
   console.log('nativeModule', nativeModule.increment()) // 2

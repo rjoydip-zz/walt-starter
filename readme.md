@@ -15,6 +15,8 @@ $ npm install
 $ npm start
 ```
 
+> Note: Fastest is wasmModule
+
 ## License
 
 MIT © [Joydip Roy](https://raw.githubusercontent.com/rjoydip/walt-starter/master/license)
