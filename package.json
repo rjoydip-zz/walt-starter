@@ -1,0 +1,26 @@
+{
+  "name": "walt-starter",
+  "version": "1.0.0",
+  "description": "Walt(an alternative syntax for WebAssembly text format) project Starter",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "start": "npm run server:dev",
+    "server:dev": "npx concurrently \"npm run build:dev\" \"npx webpack-dev-server --env.development --config webpack.config.js\"",
+    "server:prod": "npx concurrently \"npm run build:prod\" \"npx webpack-dev-server --env.production --config webpack.config.js\"",
+    "build:dev": "npx webpack --env.development --watch --config webpack.config.js",
+    "build:prod": "npx webpack --env.production --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "npx": "^10.2.0",
+    "walt-compiler": "^0.16.3",
+    "walt-loader": "^1.1.7",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
+}
