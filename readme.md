@@ -15,6 +15,29 @@ $ npm install
 $ npm start
 ```
 
+## Basic use
+
+- Dynamic import
+
+```js
+wasmCounter().then(wasmModule => {
+  console.log('wasmModule', wasmModule.instance.exports.increment()) // 1
+  console.log('wasmModule', wasmModule.instance.exports.increment()) // 2
+  console.log('wasmModule', wasmModule.instance.exports.decrement()) // 1
+});
+```
+
+- Asynchronus
+
+```js
+(async () => {
+  const wasmModule = await wasmCounter();
+  console.log('wasmModule', wasmModule.instance.exports.increment()) // 1
+  console.log('wasmModule', wasmModule.instance.exports.increment()) // 2
+  console.log('wasmModule', wasmModule.instance.exports.decrement()) // 1
+})();
+```
+
 > Note: Fastest is wasmModule
 
 ## License

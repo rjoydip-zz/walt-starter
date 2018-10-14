@@ -6,7 +6,7 @@ import nativeCounter from './src/counter';
 const log = console.log;
 const suite = new Benchmark.Suite;
 
-log(chalk.blue('Pref started ...'));
+log(chalk.blue('\nPref started ...'));
 
 suite.add('wasmModule', () => {
     wasmCounter().then(wasmModule => {
