@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = env => ({
   mode: env && env.production ? 'production' : 'development',
@@ -13,7 +14,8 @@ module.exports = env => ({
     }]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new CleanWebpackPlugin(['dist']),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   entry: './src/index.js',
   output: {
